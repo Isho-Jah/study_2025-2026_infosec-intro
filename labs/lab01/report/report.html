@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru-RU" xml:lang="ru-RU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Джаллох Ишмаил" />
+  <title>Отчёт по лабораторной работе №1</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: IBM Plex Serif;
+      font-size: 12pt;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: IBM Plex Mono;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  
+  
+  
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Отчёт по лабораторной работе №1</h1>
+<p class="subtitle">Установка и Конфигурация ОС на Виртуальную Машину</p>
+<p class="author">Джаллох Ишмаил</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<h2 id="toc-title">Содержание</h2>
+
+</nav>
+<h1 id="цель-работы">Цель работы</h1>
+<p>Приобретение практических навыков установки операционной системы на виртуальную машину.</p>
+<h1 id="задание">Задание</h1>
+<ol type="1">
+<li>Установить и настроить Rocky Linux.</li>
+<li>Найти следующую информацию:
+<ol type="1">
+<li>Версия Linux</li>
+<li>Частота процессора</li>
+<li>Модель процессора</li>
+<li>Объем доступной оперативной памяти</li>
+<li>Тип обнаруженного гипервизора</li>
+<li>Тип файловой системы корневого раздела</li>
+<li>Последовательность монтирования файловых систем</li>
+</ol></li>
+</ol>
+<h1 id="выполнение-лабораторной-работы">Выполнение лабораторной работы</h1>
+<p>В приложнии VirtualBox создаю новую виртуальную машину. Указываю имя виртуальной машины и добавляю оптический диск.</p>
+<figure>
+<img src="image/1.jpg" id="fig:001" style="width:70.0%" alt="Оптический диск" /><figcaption aria-hidden="true">Оптический диск</figcaption>
+</figure>
+<p>Указываю обьем памяти и создаю виртуальнный жетский диск.</p>
+<figure>
+<img src="image/2.jpg" id="fig:002" style="width:70.0%" alt="Объем оперативнной памяти" /><figcaption aria-hidden="true">Объем оперативнной памяти</figcaption>
+</figure>
+<figure>
+<img src="image/3.jpg" id="fig:003" style="width:70.0%" alt="Жетский диск" /><figcaption aria-hidden="true">Жетский диск</figcaption>
+</figure>
+<p>Соглашаюсь с поставленными настройками.</p>
+<figure>
+<img src="image/4.jpg" id="fig:004" style="width:70.0%" alt="Итог" /><figcaption aria-hidden="true">Итог</figcaption>
+</figure>
+<p>Проверяю подключения диска в носителях образ.</p>
+<figure>
+<img src="image/5.jpg" id="fig:005" style="width:70.0%" alt="Носители" /><figcaption aria-hidden="true">Носители</figcaption>
+</figure>
+<p>Запускаю машину и устанавливаю систему.</p>
+<figure>
+<img src="image/6.jpg" id="fig:006" style="width:70.0%" alt="Запуск машины" /><figcaption aria-hidden="true">Запуск машины</figcaption>
+</figure>
+<p>Выбираю язык установки.</p>
+<figure>
+<img src="image/7.jpg" id="fig:007" style="width:70.0%" alt="Выбор языка" /><figcaption aria-hidden="true">Выбор языка</figcaption>
+</figure>
+<p>Выбираю место установки, отключаю kdump, создаю пользователя (администратор) и устанавливаю пароль для администратора.</p>
+<figure>
+<img src="image/80.jpg" id="fig:008" style="width:70.0%" alt="Окно настроек" /><figcaption aria-hidden="true">Окно настроек</figcaption>
+</figure>
+<figure>
+<img src="image/11.jpg" id="fig:0011" style="width:70.0%" alt="Отключение kdump" /><figcaption aria-hidden="true">Отключение kdump</figcaption>
+</figure>
+<figure>
+<img src="image/9.jpg" id="fig:009" style="width:70.0%" alt="Создание пользователя" /><figcaption aria-hidden="true">Создание пользователя</figcaption>
+</figure>
+<p>Выбираю окружение сервер с GUI и средства разработки в дополнительном программном обеспечении.</p>
+<figure>
+<img src="image/10.jpg" id="fig:0010" style="width:70.0%" alt="Выбор окружения" /><figcaption aria-hidden="true">Выбор окружения</figcaption>
+</figure>
+<p>Указываю имя узла.</p>
+<figure>
+<img src="image/12.jpg" id="fig:0012" style="width:70.0%" alt="Выбор сети" /><figcaption aria-hidden="true">Выбор сети</figcaption>
+</figure>
+<p>Затем устанавливаю систему.</p>
+<figure>
+<img src="image/13.jpg" id="fig:0013" style="width:70.0%" alt="Установка" /><figcaption aria-hidden="true">Установка</figcaption>
+</figure>
+<p>После завершения установки образ диска пропадет из носителей.</p>
+<figure>
+<img src="image/15.jpg" id="fig:0014" style="width:70.0%" alt="Проверка носителей" /><figcaption aria-hidden="true">Проверка носителей</figcaption>
+</figure>
+<p>При запуске виртуальной машины появляется окно выбора пользователя.</p>
+<figure>
+<img src="image/14.jpg" id="fig:0015" style="width:70.0%" alt="Окно выбора пользователя" /><figcaption aria-hidden="true">Окно выбора пользователя</figcaption>
+</figure>
+<h1 id="выполнение-дополнительной-работы">Выполнение дополнительной работы</h1>
+<p>Запускаю в терминале: dmesg | grep -i “Linux version”, чтобы получить информацию о ядра.</p>
+<figure>
+<img src="image/17.jpg" id="fig:0017" style="width:70.0%" alt="Версия ядра Linux" /><figcaption aria-hidden="true">Версия ядра Linux</figcaption>
+</figure>
+<p>dmesg | grep -i “detected”, чтобы получить информацию о процессоре.</p>
+<figure>
+<img src="image/18.jpg" id="fig:0018" style="width:70.0%" alt="Частота процессора" /><figcaption aria-hidden="true">Частота процессора</figcaption>
+</figure>
+<p>dmesg | grep -i “CPU”, чтобы получить информацию о модели процессора.</p>
+<figure>
+<img src="image/19.jpg" id="fig:0019" style="width:70.0%" alt="Модель процессора" /><figcaption aria-hidden="true">Модель процессора</figcaption>
+</figure>
+<p>dmesg | grep -i “memory”, чтобы получить информацию о памяти.</p>
+<figure>
+<img src="image/20.jpg" id="fig:0020" style="width:70.0%" alt="Объем доступной оперативной памяти" /><figcaption aria-hidden="true">Объем доступной оперативной памяти</figcaption>
+</figure>
+<p>dmesg | grep -i “detected”, чтобы получить информацию о гипервизоре.</p>
+<figure>
+<img src="image/21.jpg" id="fig:0021" style="width:70.0%" alt="Тип гипервизора" /><figcaption aria-hidden="true">Тип гипервизора</figcaption>
+</figure>
+<p>sudo fdisk -l, чтобы получить информацию о файловой системе корневого раздела.</p>
+<figure>
+<img src="image/22.jpg" id="fig:0022" style="width:70.0%" alt="Тип файловой системы" /><figcaption aria-hidden="true">Тип файловой системы</figcaption>
+</figure>
+<p>dmesg | grep -i “mount”, чтобы получить информацию о монтировании файловых систем.</p>
+<figure>
+<img src="image/23.jpg" id="fig:0023" style="width:70.0%" alt="Последовательность монтирования файловых систем" /><figcaption aria-hidden="true">Последовательность монтирования файловых систем</figcaption>
+</figure>
+<h1 id="ответы-на-контрольные-вопросы">Ответы на контрольные вопросы</h1>
+<ol type="1">
+<li><p>Учетная запись содержит необходимые для идентификации пользователя при подключении к системе данные, а так же информацию для авторизации и учета: системного имени (user name) (оно может содержать только латинские буквы и знак нижнее подчеркивание, еще оно должно быть уникальным), идентификатор пользователя (UID) (уникальный идентификатор пользователя в системе, целое положительное число), идентификатор группы (CID) (группа, к к-рой относится пользователь. Она, как минимум, одна, по умолчанию - одна), полное имя (full name) (Могут быть ФИО), домашний каталог (home directory) (каталог, в к-рый попадает пользователь после входа в систему и в к-ром хранятся его данные), начальная оболочка (login shell) (командная оболочка, к-рая запускается при входе в систему).</p></li>
+<li><p>Для получения справки по команде: <команда> —help; для перемещения по файловой системе - cd; для просмотра содержимого каталога - ls; для определения объёма каталога - du <имя каталога>; для создания / удаления каталогов - mkdir/rmdir; для создания / удаления файлов - touch/rm; для задания определённых прав на файл / каталог - chmod; для просмотра истории команд - history</p></li>
+<li><p>Файловая система - это порядок, определяющий способ организации и хранения и именования данных на различных носителях информации. Примеры: FAT32 представляет собой пространство, разделенное на три части: олна область для служебных структур, форма указателей в виде таблиц и зона для хранения самих файлов. ext3/ext4 - журналируемая файловая система, используемая в основном в ОС с ядром Linux.</p></li>
+<li><p>С помощью команды df, введя ее в терминале. Это утилита, которая показывает список всех файловых систем по именам устройств, сообщает их размер и данные о памяти. Также посмотреть подмонтированные файловые системы можно с помощью утилиты mount.</p></li>
+<li><p>Чтобы удалить зависший процесс, вначале мы должны узнать, какой у него id: используем команду ps. Далее в терминале вводим команду kill &lt; id процесса &gt;. Или можно использовать утилиту killall, что “убьет” все процессы, которые есть в данный момент, для этого не нужно знать id процесса.</p></li>
+</ol>
+<h1 id="выводы">Выводы</h1>
+<p>Я приобрела практические навыки установки операционной системы на виртуальную машину, настройки минимально необходимых для дальнейшей работы сервисов.</p>
+<h1 class="unnumbered" id="список-литературы">Список литературы</h1>
+<p>::: :::</p>
+</body>
+</html>
